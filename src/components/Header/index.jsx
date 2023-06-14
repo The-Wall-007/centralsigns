@@ -6,7 +6,7 @@ const Header = (props) => {
   const [state] = useState({
     video: "assets/videos/header.mp4",
     poster: "assets/images/poster.png",
-    logo: "assets/images/logo.png",
+    logo: "assets/images/Logo-2.png",
   });
 
   return (
