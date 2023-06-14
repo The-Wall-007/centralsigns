@@ -1,0 +1,56 @@
+@mixin position($position, $top, $left, $bottom, $right, $witdh, $height) {
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  width: $witdh;
+  height: $height;
+}
+
+@mixin align($display, $alignItems, $justifyContent, $height) {
+  display: $display;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  height: $height;
+}
+
+@mixin button(
+  $col1,
+  $col2,
+  $txtCol,
+  $height,
+  $fontSize,
+  $brd,
+  $paddVer,
+  $paddHor
+) {
+  background: linear-gradient(to left bottom, $col1, $col2);
+  color: $txtCol;
+  text-decoration: none;
+  height: $height;
+  line-height: 4.5rem;
+  display: inline-block;
+  font-size: $fontSize;
+  font-weight: 400;
+  border-radius: $brd;
+  padding: $paddVer $paddHor;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@mixin animation($name, $duration, $timeFunction, $translate1, $translate2) {
+  animation: $name $duration $timeFunction;
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY($translate1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY($translate2);
+    }
+  }
+}
