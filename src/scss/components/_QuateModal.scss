@@ -2,7 +2,7 @@
 
 .modal {
   @include position(fixed, 0, 0, 0, 0, 100%, 100%);
-  background: rgba($color: $skyBlue, $alpha: 0.4);
+  background: rgba($color: $white, $alpha: 0.4);
   @include align(flex, center, center, null);
 
   &__heading {
