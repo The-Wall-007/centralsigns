@@ -1,5 +1,4 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts" as *;
 
 .header {
   width: 100%;
@@ -8,7 +7,7 @@
   clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 88%, 0 100%, 0 60%, 0 0);
 
   &__logo {
-    @include mixins.position(absolute, 3rem, 0, null, null, null, null);
+    @include position(absolute, 3rem, 0, null, null, null, null);
     z-index: 1;
 
     img {
@@ -19,37 +18,37 @@
   }
 
   &__video {
-    @include mixins.position(absolute, 0, 0, null, null, 100%, 100%);
+    @include position(absolute, 0, 0, null, null, 100%, 100%);
     overflow: hidden;
   }
 
   &__contents {
-    @include mixins.position(absolute, 0, 0, null, null, 100%, 100%);
-    background-color: rgba($color: variables.$royalBlue, $alpha: 0.3);
+    @include position(absolute, 0, 0, null, null, 100%, 100%);
+    background-color: rgba($color: $royalBlue, $alpha: 0.3);
 
     &__text {
-      @include mixins.align(flex, center, center, 100vh);
+      @include align(flex, center, center, 100vh);
       &__child {
         &__h1 {
-          // color: variables.$skyBlue;
-          // color: variables.$royalBlue;
-          color: variables.$white;
+          // color: $skyBlue;
+          // color: $royalBlue;
+          color: $white;
           text-transform: capitalize;
           font-weight: 900;
           font-size: 4.2rem;
           line-height: 3rem;
-          @include mixins.animation(heading, 1s, ease-in, -8rem, 0);
+          @include animation(heading, 1s, ease-in, -8rem, 0);
         }
         &__p {
           margin-top: 1rem;
           font-weight: 300;
-          color: variables.$white;
+          color: $white;
           font-size: 1.5rem;
-          @include mixins.animation(subHeading, 1s, ease-out, -10rem, 0);
+          @include animation(subHeading, 1s, ease-out, -10rem, 0);
         }
         &__link {
           margin-top: 1rem;
-          @include mixins.animation(headerButton, 1s, ease-out, 8rem, 0);
+          @include animation(headerButton, 1s, ease-out, 8rem, 0);
         }
       }
     }
