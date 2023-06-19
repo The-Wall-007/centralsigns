@@ -1,0 +1,101 @@
+@use "../abstracts" as *;
+
+.navigator {
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include position(absolute, 0, 0, null, null, 100%, null);
+  z-index: 1;
+
+  &__logo {
+    margin: 1rem;
+    img {
+      width: 18rem;
+      height: auto;
+      object-fit: cover;
+      margin: 0.5rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    &__item {
+      display: inline-block;
+      padding: 2rem 3rem;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1.5rem;
+
+        &:hover {
+          text-decoration: underline;
+          color: $skyBlue;
+        }
+      }
+    }
+  }
+
+  &__menuIcon {
+    width: 2.5rem;
+    height: 2rem;
+    display: none;
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+    &__menuIconBar {
+      background-color: #fff;
+      height: 0.2rem;
+      width: auto;
+      transition: background-color 0.3s ease-in-out;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+
+    &__menuOpen {
+      position: relative;
+      background: linear-gradient(to left bottom, $skyBlue 50%, $royalBlue 90%);
+    }
+
+    &__logo {
+      width: 100%;
+    }
+
+    &__menuIcon {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+    }
+
+    &__list {
+      list-style-type: none;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      display: none;
+
+      &__active {
+        display: block;
+      }
+
+      &__item {
+        display: block;
+        border-top: 1px solid #fff;
+
+        a {
+          &:hover {
+            text-decoration: underline;
+            color: $royalBlue;
+          }
+        }
+      }
+    }
+  }
+}
