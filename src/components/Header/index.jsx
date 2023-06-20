@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../Navbar";
 
 const Header = (props) => {
   const { props: propsValues, children } = props;
@@ -12,9 +13,10 @@ const Header = (props) => {
   return (
     <div className="header">
       <div className="container pr">
-        <div className="header__logo">
+        {/* <Navbar /> */}
+        {/* <div className="header__logo">
           <img src={state.logo} alt="Logo" />
-        </div>
+        </div> */}
       </div>
       <div className="header__video">
         <video
