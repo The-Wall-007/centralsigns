@@ -8,10 +8,10 @@
   height: $height;
 }
 
-@mixin align($display, $alignItems, $justifyContent, $height) {
+@mixin align($display, $justifyContent, $alignItems, $height) {
   display: $display;
-  align-items: $alignItems;
   justify-content: $justifyContent;
+  align-items: $alignItems;
   height: $height;
 }
 

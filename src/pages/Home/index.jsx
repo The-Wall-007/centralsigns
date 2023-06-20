@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { Header, QuateModal } from "../../components";
+import { Header, HomeServices, QuateModal } from "../../components";
 import ModalContext from "../../context/ModalContext";
 import { OPEN_MODAL } from "../../context/actions/ModalActions";
 import QuateForm from "../../components/QuateModal/components/QuateForm";
@@ -23,11 +23,14 @@ const Home = (props) => {
           Request a Quate
         </button>
       </Header>
+
       {ModalState.modalStatus && (
         <QuateModal>
           <QuateForm />
         </QuateModal>
       )}
+
+      <HomeServices />
     </div>
   );
 };
