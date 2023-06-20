@@ -30,10 +30,13 @@
         text-decoration: none;
         color: $white;
         font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        font-family: "Lato", sans-serif;
 
         &:hover {
           text-decoration: underline;
-          color: $skyBlue;
+          color: $darkBlue;
         }
       }
     }
@@ -45,14 +48,6 @@
     display: none;
     margin-right: 1rem;
     margin-top: 1rem;
-
-    &__menuIconBar {
-      background-color: #fff;
-      height: 0.2rem;
-      width: auto;
-      transition: background-color 0.3s ease-in-out;
-      margin-bottom: 0.6rem;
-    }
   }
 
   @media all and (max-width: 768px) {
@@ -60,7 +55,8 @@
 
     &__menuOpen {
       position: relative;
-      background: linear-gradient(to left bottom, $skyBlue 50%, $royalBlue 90%);
+      background: $white;
+      transition: all 0.3s linear;
     }
 
     &__logo {
@@ -72,6 +68,63 @@
       position: absolute;
       right: 1rem;
       top: 1.5rem;
+      transition: all 0.3s linear;
+
+      span:nth-child(1) {
+        display: block;
+        background-color: $white;
+        width: 3rem;
+        height: 0.3rem;
+      }
+      span:nth-child(2) {
+        display: block;
+        background-color: $white;
+        width: 3rem;
+        height: 0.3rem;
+        margin-top: 0.5rem;
+      }
+      span:nth-child(3) {
+        display: block;
+        background-color: $white;
+        width: 3rem;
+        height: 0.3rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &__menuIcon__active {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+      margin-top: 1.5rem;
+      margin-right: 1.5rem;
+      transition: all 0.3s linear;
+
+      span:nth-child(1) {
+        display: block;
+        background-color: $lightBlue;
+        width: 2.5rem;
+        height: 0.1rem;
+        margin-bottom: 0.55rem;
+        transform: rotate(-45deg) translateY(0.5rem);
+      }
+      span:nth-child(2) {
+        display: block;
+        background-color: $lightBlue;
+        width: 2.5rem;
+        height: 0.1rem;
+        display: none;
+      }
+      span:nth-child(3) {
+        display: block;
+        background-color: $lightBlue;
+        width: 2.5rem;
+        height: 0.1rem;
+        margin-top: 0.5rem;
+
+        transform: rotate(45deg) translateY(-0.5rem);
+      }
     }
 
     &__list {
@@ -87,12 +140,14 @@
 
       &__item {
         display: block;
-        border-top: 1px solid #fff;
+        border-top: 0.01rem solid $lightBlue;
 
         a {
+          color: $lightBlue;
+
           &:hover {
             text-decoration: underline;
-            color: $royalBlue;
+            color: $darkBlue;
           }
         }
       }

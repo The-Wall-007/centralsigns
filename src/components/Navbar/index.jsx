@@ -23,25 +23,31 @@ const Navbar = () => {
       </div>
       <ul className={`navigator__list ${menuOpenListing}`}>
         <li className="navigator__list__item">
-          <Link>Service1</Link>
+          <Link>SERVICE1</Link>
         </li>
         <li className="navigator__list__item">
-          <Link>Service2</Link>
+          <Link>SERVICE2</Link>
         </li>
         <li className="navigator__list__item">
-          <Link>Service3</Link>
+          <Link>SERVICE3</Link>
         </li>
         <li className="navigator__list__item">
-          <Link>Service4</Link>
+          <Link>SERVICE4</Link>
         </li>
         <li className="navigator__list__item">
-          <Link>Service5</Link>
+          <Link>SERVICE5</Link>
         </li>
       </ul>
-      <div className="navigator__menuIcon" onClick={toggleMenu}>
-        <div className="navigator__menuIcon__menuIconBar"></div>
-        <div className="navigator__menuIcon__menuIconBar"></div>
-        <div className="navigator__menuIcon__menuIconBar"></div>
+
+      <div
+        className={
+          menuOpen ? "navigator__menuIcon__active" : "navigator__menuIcon"
+        }
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   );
